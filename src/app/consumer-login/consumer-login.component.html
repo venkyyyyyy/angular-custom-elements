@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="col-sm-2"></div>
+  <div *ngIf="user.locale && user.locale === 'ja'" style="padding-top: 30px" class="col-sm-10">
+    <h2 style="padding-bottom: 20px;">以下は、Angular 9アプリケーションからの応答です。</h2>
+    <p><strong>{{user.email}}</strong>様、Angular 9アプリケーションのカスタム要素からのこのメッセージが表示されています。</p>
+    <p>このAngular 9アプリケーションのaotビルドは1つのファイルにバンドルされ、メインのindex.htmlファイルからangular 1で提供されます</p>
+    <p>上記の角度1フォームからの動的入力も、こちらで受け取られることに注意してください。</p>
+    <p>"ja"以外のロケールを入力すると、コンテンツは英語のみで表示されます。</p>
+    <p>Angular 9アプリケーションは入力を受け取りますが、Angular 1アプリケーションにデータを返すこともできます</p>    
+    <p>下のボタンをクリックしてください。</p>
+    <button (click)="acknowledgeUser();">クリックしてください</button>
+  </div>
+
+  <div *ngIf="user.locale && user.locale !== 'ja'" style="padding-top: 30px" class="col-sm-10">
+    <h2 style="padding-bottom: 20px;">Response:</h2>
+    <p>Dear <strong>{{user.email}}</strong>, you are seeing this message from Angular 9 application custom elements.</p>
+    <p>This Angular 9 application's aot build is bundled into a single file and served from your main index.html file in angular 1</p>
+    <p>Please make a note that your dynamic inputs from above angular 1 form are received at our end as well.</p>
+    <p>If you are entering any other locale other than "ja" , you will see content in english only.</p>
+    <p>While Angular 9 application receives your input's, it can also send back data to Angular 1 application.</p>
+    <p>Please click below button for the same.</p>
+    <button (click)="acknowledgeUser();">Click Me</button>    
+  </div>
+</div>
