@@ -50,7 +50,7 @@
   
   <script>
     const element = document.querySelector('app-consumer-login');
-    element.addEventListener('display', (event) => {
+    element.addEventListener('display', function(event) {
       alert(event.detail.thankyouMessage);
     });
   </script>
